@@ -3,6 +3,8 @@
 > **Make a Wish. We Make It Happen.**  
 > Designing and building bespoke digital experiences, products, and intelligent systems.
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2F11n11company%2F11n11company)
+
 ---
 
 ## ✦ Overview
@@ -15,6 +17,7 @@ The official digital flagship and website for **11:11 COMPANY**. Built with an e
 - **Typography**: Cormorant Garamond & Inter (Google Fonts)
 - **Icons**: Lucide React
 - **Animations**: Framer Motion
+- **Deployment**: Vercel ready (`vercel.json`)
 
 ## ✦ Project Structure
 ```
@@ -29,6 +32,7 @@ src/
 ├── pages/
 │   └── Home.tsx
 ├── sections/
+│   ├── Contact.tsx
 │   ├── CTA.tsx
 │   ├── Hero.tsx
 │   ├── Intro.tsx
