@@ -29,8 +29,8 @@ export default {
         'widest-subtle': '0.15em',
       },
       boxShadow: {
-        'subtle-device': '0 25px 50px -12px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(0, 0, 0, 0.04)',
-        'phone-device': '0 20px 40px -10px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05)',
+        'subtle-device': '0 25px 50px -12px rgba(0, 0, 0, 0.08)',
+        'phone-device': '0 25px 50px -12px rgba(0, 0, 0, 0.2)',
       }
     },
   },

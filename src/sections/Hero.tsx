@@ -152,8 +152,8 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContactModal }) => {
               </div>
 
               {/* SMARTPHONE MOCKUP OVERLAPPING LAPTOP */}
-              <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-6 w-36 sm:w-44 z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500 shadow-phone-device">
-                <div className="bg-[#1A1A1A] p-1.5 sm:p-2 rounded-[28px] sm:rounded-[36px] border border-neutral-600">
+              <div className="absolute -bottom-6 -left-4 sm:-bottom-8 sm:-left-6 w-36 sm:w-44 z-20 transform -rotate-3 hover:rotate-0 transition-transform duration-500">
+                <div className="bg-[#1A1A1A] p-1.5 sm:p-2 rounded-[28px] sm:rounded-[36px] shadow-2xl">
                   {/* Notch / Speaker */}
                   <div className="w-12 h-2.5 bg-[#1A1A1A] mx-auto rounded-b-md z-30 mb-1" />
                   
