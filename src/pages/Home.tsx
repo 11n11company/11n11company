@@ -6,6 +6,7 @@ import { Projects } from '../sections/Projects';
 import { Philosophy } from '../sections/Philosophy';
 import { Process } from '../sections/Process';
 import { CTA } from '../sections/CTA';
+import { Contact } from '../sections/Contact';
 
 interface HomeProps {
   onOpenContactModal: () => void;
@@ -22,6 +23,7 @@ export const Home: React.FC<HomeProps> = ({ onOpenContactModal, onSelectService 
       <Philosophy />
       <Process />
       <CTA onOpenContactModal={onOpenContactModal} />
+      <Contact />
     </main>
   );
 };

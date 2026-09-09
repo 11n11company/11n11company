@@ -7,7 +7,7 @@ interface CTAProps {
 
 export const CTA: React.FC<CTAProps> = ({ onOpenContactModal }) => {
   return (
-    <section id="contact" className="py-28 sm:py-36 bg-[#FAFAFA] border-t border-[#E8E8E8]">
+    <section id="start-project" className="py-28 sm:py-36 bg-[#FAFAFA] border-t border-[#E8E8E8]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
         {/* Three-column horizontal composition */}
