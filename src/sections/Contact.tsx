@@ -28,29 +28,26 @@ export const Contact: React.FC = () => {
     <section id="contact" className="py-24 sm:py-32 bg-white border-t border-[#E8E8E8]">
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         
-        {/* Section Header */}
-        <div className="mb-16">
-          <span className="font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#777777] block mb-3">
-            CONTACT US
-          </span>
-          <h2 className="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-[#0A0A0A] tracking-tight leading-tight">
-            Get in touch.
-            <br />
-            <span className="italic font-light">We'd love to hear from you.</span>
-          </h2>
-        </div>
-
-        {/* Two-Column Grid: Contact Information & Direct Message Form */}
+        {/* Side-by-Side Two-Column Grid: Text & Form Box aligned together */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
           
-          {/* LEFT: Studio Details & Direct Channels */}
-          <div className="lg:col-span-5 flex flex-col justify-between space-y-10">
+          {/* LEFT COLUMN: Section Title, Narrative & Studio Channels */}
+          <div className="lg:col-span-5 flex flex-col justify-between space-y-8">
             <div>
+              <span className="font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#777777] block mb-3">
+                CONTACT US
+              </span>
+              <h2 className="font-serif-editorial text-4xl sm:text-5xl lg:text-6xl font-normal text-[#0A0A0A] tracking-tight leading-tight mb-6">
+                Get in touch.
+                <br />
+                <span className="italic font-light">We'd love to hear from you.</span>
+              </h2>
+
               <p className="font-sans text-sm sm:text-base text-[#555555] leading-relaxed font-normal mb-8 max-w-md">
                 Have a question, partnership proposal, or media request? Reach out directly to our global team or send a message through the form.
               </p>
 
-              {/* Contact Channels */}
+              {/* Direct Channels */}
               <div className="space-y-6 pt-2">
                 <div className="flex items-start space-x-4">
                   <div className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center shrink-0 text-[#0A0A0A]">
@@ -107,7 +104,7 @@ export const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* RIGHT: Direct Message Form */}
+          {/* RIGHT COLUMN: Form Box Aligned to the Side */}
           <div className="lg:col-span-7 bg-[#FAFAFA] border border-[#E8E8E8] p-8 sm:p-12 relative shadow-xs">
             {submitted ? (
               <div className="py-16 text-center flex flex-col items-center">
