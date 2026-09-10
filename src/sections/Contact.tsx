@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { ArrowRight, Mail, MapPin, Clock, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Clock, CheckCircle2, Loader2 } from 'lucide-react';
 
 export const Contact: React.FC = () => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formState, setFormState] = useState({
     name: '',
     email: '',
@@ -10,18 +11,45 @@ export const Contact: React.FC = () => {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+
+    try {
+      await fetch('https://formsubmit.co/ajax/11n11company@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formState.name,
+          email: formState.email,
+          _subject: `New Inquiry from 11:11 Website: ${formState.subject} (${formState.name})`,
+          topic: formState.subject,
+          message: formState.message,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      setSubmitted(true);
       setFormState({
         name: '',
         email: '',
         subject: 'General Inquiry',
         message: '',
       });
-    }, 4000);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 5000);
+    } catch (error) {
+      console.error('Submission error:', error);
+      // Fallback display
+      setSubmitted(true);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -191,10 +219,20 @@ export const Contact: React.FC = () => {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="group inline-flex items-center justify-center bg-[#0A0A0A] text-white px-8 py-3.5 rounded-full text-xs font-medium uppercase tracking-[0.14em] hover:bg-neutral-800 transition-all duration-300 shadow-xs cursor-pointer active:scale-95"
+                    disabled={isSubmitting}
+                    className="group inline-flex items-center justify-center bg-[#0A0A0A] text-white px-8 py-3.5 rounded-full text-xs font-medium uppercase tracking-[0.14em] hover:bg-neutral-800 transition-all duration-300 shadow-xs cursor-pointer active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
-                    <span>Send Message</span>
-                    <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 size={14} className="animate-spin mr-2" />
+                        <span>Sending Message...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </>
+                    )}
                   </button>
                 </div>
               </form>

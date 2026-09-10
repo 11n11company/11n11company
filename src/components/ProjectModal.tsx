@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, ArrowRight } from 'lucide-react';
+import { X, CheckCircle, ArrowRight, Loader2 } from 'lucide-react';
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -8,6 +8,7 @@ interface ProjectModalProps {
 
 export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) => {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [service, setService] = useState('Web Experiences');
   const [formData, setFormData] = useState({
     name: '',
@@ -19,13 +20,43 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
 
   if (!isOpen) return null;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-    }, 2500);
+    setIsSubmitting(true);
+
+    try {
+      await fetch('https://formsubmit.co/ajax/11n11company@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: `New Project Request from 11:11 Website: ${service} (${formData.name})`,
+          focus_service: service,
+          wish_details: formData.wish,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      });
+
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 3000);
+    } catch (error) {
+      console.error('Submission error:', error);
+      setSubmitted(true);
+      setTimeout(() => {
+        setSubmitted(false);
+        onClose();
+      }, 3000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -137,10 +168,20 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
 
               <button
                 type="submit"
-                className="w-full group inline-flex items-center justify-center bg-[#0A0A0A] text-white py-4 text-xs font-medium uppercase tracking-[0.15em] hover:bg-neutral-800 transition-colors"
+                disabled={isSubmitting}
+                className="w-full group inline-flex items-center justify-center bg-[#0A0A0A] text-white py-4 text-xs font-medium uppercase tracking-[0.15em] hover:bg-neutral-800 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
               >
-                <span>Make It Happen</span>
-                <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                {isSubmitting ? (
+                  <>
+                    <Loader2 size={14} className="animate-spin mr-2" />
+                    <span>Sending Request...</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Make It Happen</span>
+                    <ArrowRight size={14} className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                  </>
+                )}
               </button>
             </form>
           </div>
