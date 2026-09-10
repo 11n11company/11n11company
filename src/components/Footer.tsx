@@ -15,7 +15,7 @@ export const Footer: React.FC = () => {
               <a href="#home" className="inline-block group mb-4">
                 <img
                   src={logoImg}
-                  alt="11:11 Company"
+                  alt="11 n 11 company"
                   className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </a>
@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
               </p>
             </div>
             <p className="font-sans text-xs text-[#888888] mt-8 md:mt-0">
-              © {currentYear} 11:11 Company. All rights reserved.
+              © {currentYear} 11 n 11 company. All rights reserved.
             </p>
           </div>
 
@@ -87,7 +87,7 @@ export const Footer: React.FC = () => {
         {/* Bottom divider line */}
         <div className="border-t border-[#EEEEEE] pt-6 flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#888888] font-sans">
           <span>Crafted with editorial precision for the modern web.</span>
-          <span className="mt-2 sm:mt-0">11:11 Studio — Global Digital Practice</span>
+          <span className="mt-2 sm:mt-0">11 n 11 Company — Global Digital Practice</span>
         </div>
       </div>
     </footer>
