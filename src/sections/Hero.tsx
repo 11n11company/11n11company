@@ -120,7 +120,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContactModal }) => {
                         </span>
                         <div className="flex space-x-3 text-[9px] font-sans text-neutral-500 uppercase tracking-widest">
                           <span>Works</span>
-                          <span>Studio</span>
+                          <span>Services</span>
                           <span>Contact</span>
                         </div>
                       </div>
@@ -168,9 +168,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContactModal }) => {
                       <div className="w-8 h-8 rounded-full border border-black mx-auto mb-2 flex items-center justify-center">
                         <span className="font-serif text-[10px]">✦</span>
                       </div>
-                      <span className="text-[7px] tracking-widest uppercase font-sans text-neutral-400 block">
-                        STUDIO
-                      </span>
                       <p className="font-serif-editorial text-xs text-black font-medium leading-tight">
                         Wish. Built.
                       </p>
