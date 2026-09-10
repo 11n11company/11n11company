@@ -41,7 +41,7 @@ export const Projects: React.FC = () => {
         'A modern educational institution platform providing fast-track learning opportunities and recognized university certifications.',
       imageUrl: fastrackImg,
       year: '2026',
-      link: 'https://login.fastrackeduhub.com/login',
+      link: 'https://www.fastrackeduhub.com/',
     },
   ];
 
