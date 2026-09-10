@@ -1,4 +1,5 @@
 import React from 'react';
+import logoImg from '../assets/logo.png';
 
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -11,15 +12,14 @@ export const Footer: React.FC = () => {
           {/* LEFT: Logo & Copyright */}
           <div className="md:col-span-4 flex flex-col justify-between">
             <div>
-              <a href="#home" className="flex flex-col items-start group">
-                <span className="font-serif-editorial text-3xl font-normal tracking-tight text-[#0A0A0A] leading-none">
-                  11:11
-                </span>
-                <span className="font-sans text-[9px] tracking-[0.3em] uppercase text-[#666666] font-medium mt-1">
-                  COMPANY
-                </span>
+              <a href="#home" className="inline-block group mb-4">
+                <img
+                  src={logoImg}
+                  alt="11:11 Company"
+                  className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                />
               </a>
-              <p className="font-sans text-xs text-[#666666] mt-4 max-w-xs leading-relaxed">
+              <p className="font-sans text-xs text-[#666666] max-w-xs leading-relaxed">
                 Designing and building digital experiences, products, and intelligent systems.
               </p>
             </div>

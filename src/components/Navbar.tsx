@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
+import logoImg from '../assets/logo.png';
 
 interface NavbarProps {
   onOpenContactModal?: () => void;
@@ -45,19 +46,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-all duration-300 ${
-        scrolled ? 'py-4 border-b border-neutral-200/80 shadow-xs' : 'py-6 border-b border-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-xs transition-all duration-300 ${
+        scrolled
+          ? 'py-3 sm:py-3.5 border-b border-neutral-200/80 shadow-xs'
+          : 'py-4 sm:py-5 border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 flex items-center justify-between">
         {/* LEFT: LOGO */}
-        <a href="#home" className="group flex flex-col items-start select-none">
-          <span className="font-serif-editorial text-2xl sm:text-[28px] font-normal tracking-tight text-[#0A0A0A] leading-none group-hover:opacity-80 transition-opacity">
-            11:11
-          </span>
-          <span className="font-sans text-[8px] sm:text-[9px] tracking-[0.3em] uppercase text-[#666666] font-medium mt-1">
-            COMPANY
-          </span>
+        <a href="#home" className="group flex items-center select-none py-0.5">
+          <img
+            src={logoImg}
+            alt="11:11 Company"
+            className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
+          />
         </a>
 
         {/* CENTER: DESKTOP NAVIGATION */}
