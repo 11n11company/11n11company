@@ -126,12 +126,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1">
-                    Your Name
+                    Name
                   </label>
                   <input
                     type="text"
                     required
-                    placeholder="Jane Doe"
+                    placeholder="Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full border-b border-[#D4D4D4] py-2 text-xs focus:border-black outline-hidden transition-colors"
@@ -139,12 +139,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
                 </div>
                 <div>
                   <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1">
-                    Email Address
+                    Email
                   </label>
                   <input
                     type="email"
                     required
-                    placeholder="jane@company.com"
+                    placeholder="Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full border-b border-[#D4D4D4] py-2 text-xs focus:border-black outline-hidden transition-colors"

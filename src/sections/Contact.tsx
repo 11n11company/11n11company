@@ -158,12 +158,12 @@ export const Contact: React.FC = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-2">
-                      Your Name
+                      Name
                     </label>
                     <input
                       type="text"
                       required
-                      placeholder="Alexander Wright"
+                      placeholder="Name"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                       className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors"
@@ -172,34 +172,17 @@ export const Contact: React.FC = () => {
 
                   <div>
                     <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-2">
-                      Email Address
+                      Email
                     </label>
                     <input
                       type="email"
                       required
-                      placeholder="alexander@domain.com"
+                      placeholder="Email"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                       className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-2">
-                    Topic / Subject
-                  </label>
-                  <select
-                    value={formState.subject}
-                    onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                    className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors cursor-pointer"
-                  >
-                    <option value="General Inquiry">General Inquiry</option>
-                    <option value="Partnership Proposal">Partnership Proposal</option>
-                    <option value="Press & Media">Press & Media</option>
-                    <option value="Career Opportunities">Career Opportunities</option>
-                    <option value="Feedback">Feedback</option>
-                  </select>
                 </div>
 
                 <div>
