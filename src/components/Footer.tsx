@@ -69,7 +69,7 @@ export const Footer: React.FC = () => {
                 Instagram
               </a>
               <a
-                href="mailto:contact@1111company.com"
+                href="mailto:11n11company@gmail.com"
                 className="font-sans text-xs sm:text-[13px] text-[#0A0A0A] hover:text-neutral-500 transition-colors"
               >
                 Email
