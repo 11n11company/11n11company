@@ -19,6 +19,7 @@ export const Projects: React.FC = () => {
         'Delivering high-quality, reliable and affordable pharmaceutical products designed to support better health outcomes.',
       imageUrl: oxentraImg,
       year: '2025',
+      link: 'https://www.oxentrapharma.com/',
     },
     {
       id: '02',
@@ -122,6 +123,19 @@ export const Projects: React.FC = () => {
             <p className="font-sans text-xs sm:text-sm text-neutral-600 leading-relaxed">
               {selectedProject.description}
             </p>
+            {selectedProject.link && (
+              <div className="mt-6 pt-5 border-t border-neutral-100 flex justify-end">
+                <a
+                  href={selectedProject.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#0A0A0A] text-white text-xs font-medium uppercase tracking-[0.14em] hover:bg-neutral-800 transition-all duration-300 shadow-xs"
+                >
+                  <span>Visit Live Website</span>
+                  <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform duration-300" />
+                </a>
+              </div>
+            )}
           </div>
         </div>
       )}

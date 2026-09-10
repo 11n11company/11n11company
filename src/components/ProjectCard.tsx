@@ -9,6 +9,7 @@ export interface ProjectItem {
   tags: string[];
   imageUrl: string;
   year: string;
+  link?: string;
 }
 
 interface ProjectCardProps {
@@ -59,10 +60,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetail 
           </p>
         </div>
 
-        {/* Circular Arrow Button */}
-        <div className="w-10 h-10 rounded-full border border-neutral-300 flex items-center justify-center shrink-0 text-[#0A0A0A] group-hover:bg-[#0A0A0A] group-hover:border-[#0A0A0A] group-hover:text-white transition-all duration-300">
-          <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
-        </div>
+        {/* Visit Button with Arrow */}
+        {project.link ? (
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            className="group/btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-sans font-medium text-[#0A0A0A] hover:bg-[#0A0A0A] hover:border-[#0A0A0A] hover:text-white transition-all duration-300 shrink-0 select-none shadow-2xs mt-1"
+          >
+            <span className="text-[11px] uppercase tracking-wider font-medium">Visit</span>
+            <ArrowUpRight size={13} className="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform duration-300" />
+          </a>
+        ) : (
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-neutral-300 text-xs font-sans font-medium text-[#0A0A0A] group-hover:bg-[#0A0A0A] group-hover:border-[#0A0A0A] group-hover:text-white transition-all duration-300 shrink-0 select-none mt-1">
+            <span className="text-[11px] uppercase tracking-wider font-medium">Visit</span>
+            <ArrowUpRight size={13} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
+          </div>
+        )}
       </div>
     </div>
   );
