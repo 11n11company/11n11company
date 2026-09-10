@@ -75,7 +75,7 @@ export const Contact: React.FC = () => {
                       Studio Presence
                     </span>
                     <p className="font-sans text-xs sm:text-[13px] text-[#444444] leading-relaxed">
-                      Zurich • New York • Tokyo • London • Bengaluru
+                      Kochi, Kerala, India
                     </p>
                   </div>
                 </div>
