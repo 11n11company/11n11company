@@ -61,9 +61,9 @@ export const Footer: React.FC = () => {
                 LinkedIn
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/11n11company?stkn=MTQ3YTFxbjl0b2Jyaw=="
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 className="font-sans text-xs sm:text-[13px] text-[#0A0A0A] hover:text-neutral-500 transition-colors"
               >
                 Instagram
