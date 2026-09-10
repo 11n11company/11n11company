@@ -30,6 +30,7 @@ export const Projects: React.FC = () => {
         'London-made smash burgers and bold flavours paired with a sleek, high-impact digital ordering destination.',
       imageUrl: pattyImg,
       year: '2025',
+      link: 'https://pattyproject.co.uk/',
     },
     {
       id: '03',
@@ -40,6 +41,7 @@ export const Projects: React.FC = () => {
         'A modern educational institution platform providing fast-track learning opportunities and recognized university certifications.',
       imageUrl: fastrackImg,
       year: '2026',
+      link: 'https://login.fastrackeduhub.com/login',
     },
   ];
 
