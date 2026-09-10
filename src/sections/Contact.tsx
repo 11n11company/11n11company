@@ -59,7 +59,7 @@ export const Contact: React.FC = () => {
                     </span>
                     <a
                       href="mailto:11n11company@gmail.com"
-                      className="font-sans font-medium text-lg sm:text-xl text-[#0A0A0A] hover:text-neutral-500 transition-colors tracking-tight"
+                      className="font-serif-editorial text-xl sm:text-2xl text-[#0A0A0A] hover:text-neutral-500 transition-colors"
                     >
                       11n11company@gmail.com
                     </a>
