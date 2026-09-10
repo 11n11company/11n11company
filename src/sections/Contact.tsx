@@ -166,7 +166,7 @@ export const Contact: React.FC = () => {
                       placeholder="Name"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors"
+                      className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-none focus:outline-none focus:ring-0 transition-colors"
                     />
                   </div>
 
@@ -180,7 +180,7 @@ export const Contact: React.FC = () => {
                       placeholder="Email"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors"
+                      className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-none focus:outline-none focus:ring-0 transition-colors"
                     />
                   </div>
                 </div>
@@ -195,7 +195,7 @@ export const Contact: React.FC = () => {
                     placeholder="Write your message here..."
                     value={formState.message}
                     onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors resize-none"
+                    className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-none focus:outline-none focus:ring-0 transition-colors resize-none"
                   />
                 </div>
 

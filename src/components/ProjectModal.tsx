@@ -125,7 +125,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1">
+                  <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1.5">
                     Name
                   </label>
                   <input
@@ -134,11 +134,11 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
                     placeholder="Name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full border-b border-[#D4D4D4] py-2 text-xs focus:border-black outline-hidden transition-colors"
+                    className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-none focus:outline-none focus:ring-0 transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1">
+                  <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1.5">
                     Email
                   </label>
                   <input
@@ -147,22 +147,22 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
                     placeholder="Email"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full border-b border-[#D4D4D4] py-2 text-xs focus:border-black outline-hidden transition-colors"
+                    className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-none focus:outline-none focus:ring-0 transition-colors"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1">
+                <label className="block text-[10px] uppercase font-sans tracking-[0.16em] text-[#555555] font-medium mb-1.5">
                   What is your wish / idea?
                 </label>
                 <textarea
-                  rows={3}
+                  rows={4}
                   required
                   placeholder="Describe your project, timeline, and goals..."
                   value={formData.wish}
                   onChange={(e) => setFormData({ ...formData, wish: e.target.value })}
-                  className="w-full border border-[#E0E0E0] p-3 text-xs focus:border-black outline-hidden transition-colors resize-none"
+                  className="w-full bg-white border border-[#E0E0E0] p-3 text-xs focus:border-black outline-none focus:outline-none focus:ring-0 transition-colors resize-none"
                 />
               </div>
 
