@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenContactModal }) => {
         <a href="#home" className="group flex items-center select-none py-0.5">
           <img
             src={logoImg}
-            alt="11:11 Company"
+            alt="11 n 11 Company"
             className="h-9 sm:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </a>

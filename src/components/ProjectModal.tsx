@@ -81,7 +81,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ isOpen, onClose }) =
               Wish Received.
             </h3>
             <p className="font-sans text-xs text-[#666666] max-w-sm">
-              Thank you for reaching out to 11:11 Company. Our partners will review your vision and connect within 24 hours.
+              Thank you for reaching out to 11 n 11 Company. Our partners will review your vision and connect within 24 hours.
             </p>
           </div>
         ) : (

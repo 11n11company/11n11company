@@ -54,7 +54,7 @@ export const Philosophy: React.FC = () => {
           {/* Right Column: Narrative paragraph */}
           <div className="lg:col-span-5">
             <p className="font-sans text-sm sm:text-base text-[#555555] leading-relaxed font-normal">
-              At 11:11 Company, we believe modern software should feel as bespoke as architectural design. We seamlessly unify aesthetic rigor, rigorous systems engineering, and scalable digital solutions to transform visionary concepts into durable, market-defining companies.
+              At 11 n 11 Company, we believe modern software should feel as bespoke as architectural design. We seamlessly unify aesthetic rigor, rigorous systems engineering, and scalable digital solutions to transform visionary concepts into durable, market-defining companies.
             </p>
           </div>
 

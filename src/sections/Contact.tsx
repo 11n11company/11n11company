@@ -127,7 +127,7 @@ export const Contact: React.FC = () => {
             {/* Subtle Brand Tagline */}
             <div className="border-t border-neutral-100 pt-6">
               <span className="font-serif-editorial text-lg text-[#666666] italic">
-                11:11 Company — Every conversation begins with an open mind.
+                11 n 11 Company — Every conversation begins with an open mind.
               </span>
             </div>
           </div>
