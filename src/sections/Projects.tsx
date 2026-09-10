@@ -2,41 +2,42 @@ import React, { useState } from 'react';
 import { ArrowRight, X } from 'lucide-react';
 import { ProjectCard, ProjectItem } from '../components/ProjectCard';
 
+import oxentraImg from '../assets/projects/oxentra-pharma.png';
+import pattyImg from '../assets/projects/patty-project.png';
+import fastrackImg from '../assets/projects/fastrack-eduhub.png';
+
 export const Projects: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<ProjectItem | null>(null);
 
   const projectsData: ProjectItem[] = [
     {
       id: '01',
-      title: 'Aura Architecture Studio',
-      category: 'Digital Flagship',
-      tags: ['Website', 'Creative Direction'],
+      title: 'Oxentra Pharma',
+      category: 'Healthcare & Pharma',
+      tags: ['Healthcare', 'Web Experience'],
       description:
-        'A minimalist digital archive and portfolio platform for an avant-garde architectural firm in Zurich.',
-      imageUrl:
-        'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop',
+        'Delivering high-quality, reliable and affordable pharmaceutical products designed to support better health outcomes.',
+      imageUrl: oxentraImg,
       year: '2025',
     },
     {
       id: '02',
-      title: 'Kinetix Autonomous Cloud',
-      category: 'SaaS Platform',
-      tags: ['SaaS', 'Cloud System'],
+      title: 'Patty Project London',
+      category: 'Food & Hospitality',
+      tags: ['E-Commerce', 'Brand Flagship'],
       description:
-        'Next-generation orchestration dashboard and monitoring interface built for AI infrastructure scaling.',
-      imageUrl:
-        'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop',
+        'London-made smash burgers and bold flavours paired with a sleek, high-impact digital ordering destination.',
+      imageUrl: pattyImg,
       year: '2025',
     },
     {
       id: '03',
-      title: 'Monolith Financial Protocol',
-      category: 'Fintech Application',
-      tags: ['Mobile & Web', 'Fintech'],
+      title: 'Fastrack Edu Hub',
+      category: 'EdTech & Learning',
+      tags: ['EdTech', 'Certification Portal'],
       description:
-        'Institutional-grade wealth management client portal with real-time portfolio analytics and instant liquidity.',
-      imageUrl:
-        'https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop',
+        'A modern educational institution platform providing fast-track learning opportunities and recognized university certifications.',
+      imageUrl: fastrackImg,
       year: '2026',
     },
   ];
@@ -105,7 +106,7 @@ export const Projects: React.FC = () => {
               <img
                 src={selectedProject.imageUrl}
                 alt={selectedProject.title}
-                className="w-full h-full object-cover grayscale"
+                className="w-full h-full object-cover"
               />
             </div>
             <div className="flex gap-2 mb-2">

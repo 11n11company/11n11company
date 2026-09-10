@@ -23,11 +23,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetail 
       className="group flex flex-col cursor-pointer transition-all duration-300"
     >
       {/* Project Image Container */}
-      <div className="relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 border border-[#EAEAEA] mb-5">
+      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100 border border-[#EAEAEA] mb-5">
         <img
           src={project.imageUrl}
           alt={project.title}
-          className="w-full h-full object-cover grayscale contrast-105 group-hover:scale-105 transition-transform duration-700 ease-out"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
