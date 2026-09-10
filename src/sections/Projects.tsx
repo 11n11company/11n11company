@@ -102,7 +102,7 @@ export const Projects: React.FC = () => {
             >
               <X size={20} />
             </button>
-            <div className="aspect-[16/9] w-full overflow-hidden bg-neutral-100 mb-6 border border-neutral-200">
+            <div className="aspect-[3/2] w-full overflow-hidden bg-neutral-100 mb-6 border border-neutral-200">
               <img
                 src={selectedProject.imageUrl}
                 alt={selectedProject.title}

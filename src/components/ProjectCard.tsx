@@ -23,7 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onOpenDetail 
       className="group flex flex-col cursor-pointer transition-all duration-300"
     >
       {/* Project Image Container */}
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-neutral-100 border border-[#EAEAEA] mb-5">
+      <div className="relative aspect-[3/2] w-full overflow-hidden bg-neutral-100 border border-[#EAEAEA] mb-5">
         <img
           src={project.imageUrl}
           alt={project.title}
