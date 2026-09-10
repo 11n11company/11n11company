@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Mouse } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '../components/Button';
 
 interface HeroProps {
@@ -16,14 +16,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContactModal }) => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           {/* LEFT COLUMN */}
           <div className="lg:col-span-7 flex flex-col justify-center z-10">
-            {/* Small uppercase tracking label */}
-            <div className="inline-flex items-center space-x-3 mb-6">
-              <span className="font-sans text-[11px] sm:text-xs font-semibold uppercase tracking-[0.25em] text-[#777777]">
-                MAKE A WISH
-              </span>
-              <span className="w-8 h-[1px] bg-neutral-300" />
-            </div>
-
             {/* Large Serif Heading with exact line breaks */}
             <h1 className="font-serif-editorial text-[44px] sm:text-[62px] lg:text-[76px] xl:text-[84px] font-normal text-[#0A0A0A] leading-[1.04] tracking-[-0.02em] mb-7">
               Make a Wish.
@@ -195,21 +187,6 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContactModal }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* BOTTOM-RIGHT SCROLL INDICATOR */}
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 w-full pt-12 flex justify-end">
-        <a
-          href="#intro"
-          className="inline-flex items-center space-x-2 text-[#777777] hover:text-black transition-colors select-none"
-        >
-          <span className="text-[10px] uppercase font-sans tracking-[0.25em] font-medium">
-            SCROLL
-          </span>
-          <div className="w-4 h-7 rounded-full border border-neutral-400 flex items-start justify-center p-1">
-            <div className="w-1 h-1.5 bg-neutral-700 rounded-full animate-bounce" />
-          </div>
-        </a>
       </div>
     </section>
   );
