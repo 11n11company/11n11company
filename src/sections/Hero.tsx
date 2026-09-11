@@ -99,7 +99,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenContactModal }) => {
                         <div className="w-2.5 h-2.5 rounded-full bg-neutral-300" />
                       </div>
                       <div className="bg-white px-6 py-0.5 rounded-full text-[9px] font-sans text-neutral-400 tracking-wider">
-                        1111company.com
+                        11n11company.com
                       </div>
                       <div className="w-6" />
                     </div>
